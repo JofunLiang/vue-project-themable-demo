@@ -28,10 +28,15 @@
     watch: {
       value: {
         handler (val) {
-          val ? toggleTheme('default') : toggleTheme('dark')
-        },
-        immediate: true
+          const theme = val ? toggleTheme('default') : toggleTheme('dark')
+          localStorage.setItem('theme', theme)
+        }
       }
+    },
+    created () {
+      const theme = localStorage.getItem('theme')
+      this.value = theme === 'default'
+      toggleTheme(theme)
     }
   }
 </script>
