@@ -46,6 +46,7 @@
 
 <style module lang="scss">
   .precard {
+    width: 100%;
     border-radius: 6px;
     overflow: hidden;
     text-align: center;

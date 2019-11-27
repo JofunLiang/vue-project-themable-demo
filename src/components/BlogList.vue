@@ -34,14 +34,11 @@
 
 <style module lang="scss">
   .blog-list {
-    display: flex;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
     flex-wrap: wrap;
-    padding: 20px;
-    
-    .blog-item {
-      width: 20%;
-      padding: 15px;
-      box-sizing: border-box;
-    }
+    padding: 40px;
+    box-sizing: border-box;
   }
 </style>
